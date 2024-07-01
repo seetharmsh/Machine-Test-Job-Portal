@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>Edit Job</title>
+</head>
+<body>
+    <header>
+        <nav>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="" style="color: white; font-weight: bold;">GetHired.com</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Home' %}" style="color: white">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Register' %}" style="color: white">Register</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Login' %}" style="color: white">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Create' %}" style="color: white">Add Job</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'List' %}" style="color: white">View Jobs</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </nav>
+    </header>
+
+    <div class="container border shadow mt-5">
+      <h4 class="text-center">Edit Job</h4>
+      <form action="" method="POST">
+          {% csrf_token %}
+          {{ form }}
+          <div class="text-center">
+              <input type="submit" class="btn btn-success m-5 ">
+          </div>
+      </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body {
+    background-image: url(/static/images/background1.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.navbar {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+#navbarNav {
+    justify-content: right;
+}
+
+nav ul li {
+    padding-left: 25px;
+    padding-right: 25px;
+}
